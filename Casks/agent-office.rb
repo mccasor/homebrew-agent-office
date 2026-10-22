@@ -1,7 +1,7 @@
 # Cask del tap mccasor/homebrew-agent-office: version e sha256 li aggiorna scripts/release.mjs.
 cask "agent-office" do
-  version "0.4.1"
-  sha256 "a7f0163eb63e61111bb97555b817e075898ab783152d522ecc43fca1027ed85c"
+  version "0.4.2"
+  sha256 "d432fa932ca54980bac504022dcdc68ab60fa8d2528863940578dafbc45f708c"
 
   url "https://github.com/mccasor/homebrew-agent-office/releases/download/v#{version}/Agent-Office_#{version}_universal.dmg"
   name "Agent Office"
@@ -15,8 +15,11 @@ cask "agent-office" do
   app "Agent Office.app"
 
   # firma ad-hoc, non notarizzata: senza la quarantena macOS la apre senza chiedere conferma
+  # e la registra tra le applicazioni (LaunchServices): l'app lo rifà comunque a ogni avvio
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Agent Office.app"], must_succeed: false
+    run "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
+        args: ["-f", "-R", "{{appdir}}/Agent Office.app"], must_succeed: false
   end
 
   uninstall quit: "app.agent-office.menubar"
