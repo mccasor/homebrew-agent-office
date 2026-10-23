@@ -1,11 +1,11 @@
 # Cask del tap mccasor/homebrew-agent-office: version e sha256 li aggiorna scripts/release.mjs.
 cask "agent-office" do
-  version "0.6.0"
-  sha256 "9538c0ed60ac271c903f3a53ae723f06e609cf87d80de2e0eb9ee7bffc8714a8"
+  version "0.6.1"
+  sha256 "4c943305839bf96764559e5e1fabaa5ae7d6766e328ed94c4f0213b32d5590c8"
 
   url "https://github.com/mccasor/homebrew-agent-office/releases/download/v#{version}/Agent-Office_#{version}_universal.dmg"
   name "Agent Office"
-  desc "Ufficio 3D con gli agenti di Claude Code al lavoro, nella menu bar"
+  desc "Pixel-art office showing your Claude Code agents at work, in the menu bar"
   homepage "https://github.com/mccasor/homebrew-agent-office"
 
   # il server dell'ufficio gira con Node
