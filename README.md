@@ -1,6 +1,6 @@
 # Agent Office for Homebrew
 
-Agent Office shows your Claude Code agents at work in a small 3D office, with an icon in the macOS menu bar:
+Agent Office shows your Claude Code agents at work in a small 2D office, with an icon in the macOS menu bar:
 
 - **green**: Claude is working;
 - **red**: Claude is waiting for your input;
