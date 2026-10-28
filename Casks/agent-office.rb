@@ -1,7 +1,7 @@
 # Cask del tap mccasor/homebrew-agent-office: version e sha256 li aggiorna scripts/release.mjs.
 cask "agent-office" do
-  version "0.8.1"
-  sha256 "a6741acd044f4e6108353bd0b566568c7e3f45548d9f3c6b9220ed3ae9fa2ccd"
+  version "0.8.2"
+  sha256 "07d66c7a5cb7c4107cc3531014b82ebbde3426db69b5ca6a180a552a7b5fe998"
 
   url "https://github.com/mccasor/homebrew-agent-office/releases/download/v#{version}/Agent-Office_#{version}_universal.dmg"
   name "Agent Office"
