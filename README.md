@@ -1,30 +1,30 @@
-# Agent Office per Homebrew
+# Agent Office for Homebrew
 
-Agent Office mostra gli agenti di Claude Code al lavoro in un piccolo ufficio 3D, con un'icona nella menu bar di macOS:
+Agent Office shows your Claude Code agents at work in a small 3D office, with an icon in the macOS menu bar:
 
-- **verde**: Claude sta lavorando;
-- **rosso**: Claude aspetta un tuo input;
-- **grigio**: nessuna sessione attiva.
+- **green**: Claude is working;
+- **red**: Claude is waiting for your input;
+- **gray**: no active session.
 
-## Installazione
+## Installation
 
 ```sh
 brew install --cask mccasor/agent-office/agent-office
 ```
 
-Homebrew installa anche Node, che serve al server dell'ufficio. L'app è firmata ad-hoc e non notarizzata: il cask le toglie la quarantena, così macOS la apre senza chiedere conferma.
+Homebrew also installs Node, which the office server needs. The app is ad-hoc signed and not notarized: the cask removes the quarantine attribute, so macOS opens it without asking for confirmation.
 
-Dopo l'installazione, nel menu dell'icona:
+After installing, from the icon's menu:
 
-- **Impostazioni → Installa gli hook di Claude Code**: abilita lo stato in tempo reale, comprese le richieste di permesso;
-- **Impostazioni → Avvia al login**: tiene l'icona sempre nella menu bar.
+- **Settings → Claude Code hooks → Install**: enables real-time status, including permission requests;
+- **Settings → Open at login**: keeps the icon in the menu bar at all times.
 
-## Aggiornamento e disinstallazione
+## Upgrade and uninstall
 
 ```sh
 brew upgrade --cask agent-office
 brew uninstall --cask agent-office          # app
-brew uninstall --zap --cask agent-office    # app, dati e avvio al login
+brew uninstall --zap --cask agent-office    # app, data and launch at login
 ```
 
-Prima di disinstallare puoi togliere gli hook da **Impostazioni → Rimuovi gli hook di Claude Code**. Se restano, non danno errori.
+Before uninstalling you can remove the hooks from **Settings → Claude Code hooks → Remove**. If they stay behind, they don't cause errors.
